@@ -1,10 +1,11 @@
 import './App.css'
+import Header from './pages/header/Header'
 
 function App() {
   return (
-<>
-    <h1>App Working ..</h1>
-</>
+    <>
+      <Header/>
+    </>
   )
 }
 
