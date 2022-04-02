@@ -11,7 +11,7 @@
 
 .containerHeader{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #555;
 
     .firstNav{
@@ -157,7 +157,6 @@
         }
         
         .carousel{
-            
             padding: 2% 0;
             .mainText{
                 position: relative;
@@ -212,8 +211,8 @@
             .threeContainer{
                 position: absolute;
                 top: 0;
-                left: 30%;
-                width: 70%;
+                left: 0;
+                width: 100%;
                 height: 100vh;
             }
         }
