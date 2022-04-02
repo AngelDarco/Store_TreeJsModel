@@ -5,7 +5,6 @@ import { BsFillTelephoneFill, BsFillCaretDownFill } from 'react-icons/bs';
 import { GrFormSearch } from 'react-icons/gr';
 import { HiShoppingCart } from 'react-icons/hi';
 
-import { Suspense, useRef} from 'react';
 import ThreeHeardphones from '../../three/ThreeHeardphones';
 
 const Header = () => {
@@ -13,7 +12,7 @@ const Header = () => {
 
     return (
         <>
-{/*             <div className="containerHeader">
+            <div className="containerHeader">
                 <div className="firstNav">
                     <div className="phone">
                         <BsFillTelephoneFill />
@@ -80,18 +79,15 @@ const Header = () => {
                         </div>
 
 
-                         <div className="threeContainer" >
+                        <div className="threeContainer">
                                 <ThreeHeardphones/>
-                           </div> 
+                        </div> 
                             
                     </div>
 
                 </div>
 
-            </div> */}
-            <div className="threeContainer" >
-                                <ThreeHeardphones/>
-                           </div>
+            </div> 
         </>
     )
 }
