@@ -6,10 +6,14 @@ import { GrFormSearch } from 'react-icons/gr';
 import { HiShoppingCart } from 'react-icons/hi';
 
 import ThreeHeardphones from '../../three/ThreeHeardphones';
+import { useRef, useState } from 'react';
 
 const Header = () => {
-   // const container = useRef();
-
+    const menu = useRef();
+    const [ Ul, setUl ] = useState('none');
+    const classChange = ()=>{
+        Ul === 'none' ? setUl('block') : setUl('none')
+    }
     return (
         <>
             <div className="containerHeader">
@@ -32,7 +36,7 @@ const Header = () => {
                     </div>
                     <div className="input">
                         <div className="categories">
-                            <AiOutlineMenu />
+                        <AiOutlineMenu />
                             <p>all categories</p>
                             <BsFillCaretDownFill />
                         </div>
@@ -51,7 +55,11 @@ const Header = () => {
 
                 <div className="tirdNav">
                     <div className="links">
-                        <ul>
+                        <div className='menu' onClick={()=> classChange()}>
+                            <AiOutlineMenu />
+                            <AiOutlineMenu />
+                        </div>
+                        <ul ref={menu} className={Ul}>
                             <li>home</li>
                             <li>about</li>
                             <li>mobile</li>
@@ -70,8 +78,7 @@ const Header = () => {
                     <div className="carousel">
                         <div className="mainText">
                             <div className="cursive">
-                                <p>- Lorem adipisicing elit. earum</p>
-                                <span></span> 
+                                <p>- Lorem adipisicing elit. earum. earum <span></span></p>
                             </div>
                             <h1>Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
                             <p>Lorem Quasi non tempore Quasi non tempore quia ipsum dolor sit amet, suscipit quis.</p>
@@ -80,7 +87,7 @@ const Header = () => {
 
 
                         <div className="threeContainer">
-                                <ThreeHeardphones/>
+                                 <ThreeHeardphones/> 
                         </div> 
                             
                     </div>

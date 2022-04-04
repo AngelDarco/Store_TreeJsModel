@@ -1,220 +1,375 @@
     $color-primary: #FFC300;
     $color-secondary: #fff;
 
-@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
-@mixin dFlex {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
 
-
-.containerHeader{
-    width: 100%;
-    height: auto;
-    background-color: #555;
-    .firstNav{
-        @include dFlex();
-        width: 100%;
-        height: 2.4rem;
-        background: #000;
-        .phone{
-            background: $color-primary;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 20%;
-            height: 100%; 
-            .pcall{
-                padding: 0 2%;
-                font-size: 1.1rem;
-            }
-            .scall{
-                font-size: .8rem;
-            }
-        }
-        .links{
-            @include dFlex();
-            width: auto;
-            height: 100%;
-            p{
-                @include dFlex();
-                height: 40%;
-                padding: 0 .6rem;
-                text-align: center;
-                border-right: 1px solid #AAA;
-                color: #fff;
-            }
-        }
+    @mixin dFlex {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    .secondNav{
-        @include dFlex();
-        background: $color-secondary;
-        height: 6rem;
+    .containerHeader {
         width: 100%;
+        height: auto;
 
-
-        .title{
+        .firstNav {
             @include dFlex();
-            width: 30%;
-            h2{ 
+            width: 100%;
+            height: 2.4rem;
+            background: #000;
+
+            .phone {
+                background: $color-primary;
                 display: flex;
                 align-items: center;
-                p{
-                color: $color-primary;
-                display: inline-flex;
-                font-size: 4.5rem;
-                transform: rotate(-15deg);
-                }
-            }
-        }
-        .input{
-            @include dFlex();
-            border-radius: 30px;
-            height: 50%;
-            width: 60%;
-            border: 1px solid;
-
-            .categories{
-                @include dFlex();
-                font-size: 1.1rem;
-                p{
-                    padding: 0 3rem 0 1rem; 
-                }
-            }
-            .search{
-                @include dFlex();
-                height: 60%;
-                width: 50%;            
-                
-                    input{
-                    height: 100%;
-                    background: transparent;
-                    font-size: 1rem;
-                    border: none;
-                    &:focus{
-                        outline: none;
-                    }
-                }
-            }
-        }
-        .user{
-            display: flex;
-            align-items: center;
-            height: 80%;
-            padding-left: 2rem;
-            width: 30%;
-            .acount{
-                @include dFlex();
-                border: 1px solid;
-                border-radius: 30px;
-                height: 60%;
-                padding: 0 1rem;
-                p{
-                    padding-left: .5rem;
-                    font-size: 1.2rem;
-                    font-weight: 700;
-                }
-                .ico{
-                    border-radius: 50%;
-                    background-color: $color-primary;
-                    padding: .5rem;
-                }
-            }
-        }
-    }
-        
-    .tirdNav{
-        background-image: radial-gradient(circle at 50% 50%, #ffec45 0, #ffdf2d 25%, #ffd200 50%, #fcc500 75%, #fab700 100%);        flex-flow: column;
-        width: 100%;
-        height: 50vh;
-        .links ul {
-            @include dFlex();
-            background: $color-primary;
-            height: 3rem;
-            margin: auto;
-            width: 90%;
-            li{
-                @include dFlex();
-                border-right: 1px solid #F99402;
-                width: 100%;
-                font-size: .8rem;
-                text-transform: uppercase;
-                font-weight: bold;
-                list-style-type: none;
-            }
-            li:last-child{
-                color: #fff;
+                justify-content: center;
+                width: auto;
                 height: 100%;
-                background: #000;
-                border: none;
-                .ico{
-                    font-size: 2rem;
+                padding: 0 .5rem;
+
+                .pcall {
+                    white-space: nowrap;
+                    padding: 0 2%;
+                    font-size: 1.1rem;
+                }
+
+                .scall {
+                    white-space: nowrap;
+                    font-size: .8rem;
+                }
+            }
+
+            .links {
+                @include dFlex();
+                width: auto;
+                height: 100%;
+
+                p {
+                    @include dFlex();
+                    height: 40%;
+                    padding: 0 .6rem;
+                    text-align: center;
+                    border-right: 1px solid #AAA;
+                    color: #fff;
                 }
             }
         }
-        
-        .carousel{
-            padding: 2% 0;
-            .mainText{
-                position: relative;
-                top: 10%;
-                left: 5%;
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                width: 45%;
-                border-top: 10px solid $color-primary;
-                border-right: 10px solid $color-primary;
-                border-bottom: 10px solid $color-primary;
 
-                .cursive{
+        .secondNav {
+            @include dFlex();
+            justify-content: center;
+            background: $color-secondary;
+            min-height: 6rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas: 'a b c'
+                'a b c';
+
+            .title {
+                grid-area: a;
+                @include dFlex();
+                min-width: 20%;
+                padding: 0 1rem;
+
+                h2 {
                     display: flex;
                     align-items: center;
-                    width: 100%;
-                    p{
-                    font-family: 'Arizonia', cursive;
-                    font-size: 1.8rem;
-                    font-weight: 600;
-                    text-align: left;
-                    height: 2.5rem;
-                }
-                    span{
-                        width: 200px;
-                        border: 1px solid #000;
-                        margin: 0 1rem;
-                    }
-                }
 
-                h1{
-                    font-size: 2.3rem;
-                }
-                p{
-                    padding-top: .5rem;
-                    padding-bottom: 2rem;
-                    font-size: .9rem;
-                }
-                button{
-                    background: none;
-                    border-radius: 30px;
-                    font-size: 1rem;
-                    font-weight: 800;
-                    position: absolute;
-                    top: 90%;
-                    left: 0;
-                    padding: .8rem 1.5rem;
+                    p {
+                        color: $color-primary;
+                        display: inline-flex;
+                        font-size: 4.5rem;
+                        transform: rotate(-15deg);
+                    }
                 }
             }
 
-            .threeContainer{
-                position: absolute;
-                top: 0;
-                left: 0;
+            .input {
+                grid-area: b;
+                @include dFlex();
+                border-radius: 30px;
+                padding: 1%;
+                margin: 2% 0;
+                min-width: 50%;
+                border: 1px solid;
+
+                .categories {
+                    @include dFlex();
+                    font-size: 1.1rem;
+
+                    p {
+                        padding: 0 2rem 0 1rem;
+                        white-space: wrap;
+                        text-align: center
+                    }
+                }
+
+                .search {
+                    grid-area: b;
+                    @include dFlex();
+                    height: 60%;
+                    width: 50%;
+
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        background: transparent;
+                        font-size: 1rem;
+                        border: none;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+
+            .user {
+                grid-area: c;
+                @include dFlex();
+                height: 100%;
+                padding-left: 2rem;
+
+                .acount {
+                    @include dFlex();
+                    border: 1px solid;
+                    border-radius: 30px;
+                    height: 60%;
+                    padding: 0 1rem;
+
+                    p {
+                        padding-left: .5rem;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+
+                    .ico {
+                        border-radius: 50%;
+                        background-color: $color-primary;
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+
+        .tirdNav {
+            background-image: radial-gradient(circle at 50% 50%, #ffec45 0, #ffdf2d 25%, #ffd200 50%, #fcc500 75%, #fab700 100%);
+            flex-flow: column;
+            width: 100%;
+            height: fit-content;
+
+            .links {
                 width: 100%;
-                height: 100vh;
+                height: fit-content;
+
+                .menu {
+                    display: none;
+                    padding: .5rem;
+                    text-align: center;
+                    font-size: 1.3rem;
+                    color: #f0f;
+                }
+
+                ul {
+                    display: grid;
+                    align-items: center;
+                    grid-template-rows: 1fr auto;
+                    grid-template-columns: repeat(10, 1fr);
+                    background: $color-primary;
+                    height: auto;
+                    margin: auto;
+                    width: 90%;
+
+                    li {
+                        border-right: 1px solid #F99402;
+                        width: auto;
+                        height: 60%;
+                        text-align: center;
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        list-style-type: none;
+
+                        &:hover {
+                            border-bottom: 2px solid #f0f;
+                        }
+                    }
+
+                    li:last-child {
+                        color: #fff;
+                        height: auto;
+                        background: #000;
+                        border: none;
+                        z-index: 50;
+
+                        .ico {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+
+            .carousel {
+                padding: 2%;
+                width: 100%;
+                height: auto;
+                position: relative;
+
+                .mainText {
+                    position: relative;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    width: 80%;
+                    height: fit-content;
+                    align-items: center;
+                    padding: 1rem;
+                    border-top: 10px solid $color-primary;
+                    border-right: 10px solid $color-primary;
+                    border-bottom: 10px solid $color-primary;
+
+                    .cursive {
+                        display: flex;
+                        align-items: center;
+                        flex-flow: row wrap;
+                        width: 100%;
+                        height: fit-content;
+
+                        p {
+                            width: 100%;
+                            font-family: 'Arizonia', cursive;
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                            @include dFlex();
+                            justify-content: flex-start;
+
+                            span {
+                                display: block;
+                                width: 30%;
+                                border: 1px solid #000;
+                                margin: 0 1rem;
+                            }
+                        }
+                    }
+
+                    h1 {
+                        font-size: 2.3rem;
+                    }
+
+                    p {
+                        padding-top: .5rem;
+                        padding-bottom: 2rem;
+                        font-size: .9rem;
+                    }
+
+                    button {
+                        background: none;
+                        border-radius: 30px;
+                        font-size: 1rem;
+                        font-weight: 800;
+                        position: absolute;
+                        top: 90%;
+                        left: 0;
+                        padding: .8rem 1.5rem;
+                    }
+                }
+
+                .threeContainer {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 60%;
+                    height: 130%;
+                    z-index: 100;
+                }
             }
         }
     }
 
-}//Final Key
+    @media (max-width: 1020px) {
+        .containerHeader {
+            .tirdNav {
+                .links {
+                    ul {
+                        grid-template-rows: repeat(2, 1fr);
+                        grid-template-columns: repeat(5, 1fr);
+                        width: 100%;
+
+                        li {
+                            width: 100%;
+                            padding: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        .containerHeader {
+            .secondNav {
+                grid-template-columns: repeat(2, auto);
+                grid-template-areas: 'a  c '
+                    'b  b ';
+            }
+
+            .tirdNav {
+                .carousel {
+                    .threeContainer {
+                        width: 70%;
+                        height: 95%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .containerHeader {
+            .firstNav {
+                flex-flow: column;
+                height: auto;
+                padding: 1rem;
+
+                .phone {
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .tirdNav {
+                .links {
+                    .menu {
+                        display: block;
+                    }
+
+                    .none {
+                        display: none;
+                        align-items: center;
+
+                        li:last-child {
+                            .ico {
+                                color: $color-primary;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+
+                    .block {
+                        display: block;
+                        align-items: center;
+                    }
+
+                }
+
+                .carousel {
+                    .threeContainer {
+                        top: 20%;
+                        width: 70%;
+                        height: 70%;
+                    }
+                }
+            }
+        }
+    }

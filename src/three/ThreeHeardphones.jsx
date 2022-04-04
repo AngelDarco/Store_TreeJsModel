@@ -15,8 +15,8 @@ const Model = () => {
         <>
             <primitive 
             object={gltf.scene} 
-            scale={0.004} 
-            position={[4, 0, 0]}
+            scale={0.006} 
+            position={[0, -.6, 0]}
             ref={ref}
             />
         </>
@@ -25,11 +25,10 @@ const Model = () => {
 
 const ThreeHeardphones = () => {
     return (
-        <Canvas>
+        <Canvas >
             <ambientLight intensity={1} />
             <directionalLight color="#fff" position={[1, 1, 5]} />
             <Suspense fallback={null}>
-                
                 <Model />
             </Suspense>
         </Canvas>
