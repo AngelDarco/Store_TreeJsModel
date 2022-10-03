@@ -5,7 +5,6 @@ import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { SiGmail } from 'react-icons/si'
 import { FaTelegramPlane } from 'react-icons/fa';
 
-
 const Footer = ()=>{
     return(
         <div className="containerFooter">
