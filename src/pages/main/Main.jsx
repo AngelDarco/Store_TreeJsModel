@@ -4,7 +4,7 @@ import Cards from "../../components/Cards";
 const Main = () => {
   return (
     <div className="containerMain">
-      <div className="title">
+      <div className="main-title">
         <span></span>
         <h2>Shop new Collection</h2>
         <span></span>
