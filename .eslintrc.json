@@ -13,7 +13,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react", "plugin:react/jsx-runtime"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
