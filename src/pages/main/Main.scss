@@ -19,11 +19,16 @@ $color-primary: #ffc300;
     height: 4rem;
     text-transform: uppercase;
     margin: 5rem 0 2rem;
+    text-align: center;
+
     span {
       border-bottom: 2px solid;
       height: 20%;
       margin: 0 1rem;
       width: 10%;
+    }
+    h2 {
+      padding: 0 20px;
     }
   }
 
@@ -126,6 +131,16 @@ $color-primary: #ffc300;
   .containerMain {
     .content {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .containerMain {
+    .main-title {
+      span {
+        width: 30%;
+      }
     }
   }
 }
