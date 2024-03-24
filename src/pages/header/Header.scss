@@ -98,7 +98,7 @@ $color-secondary: #fff;
       grid-area: b;
       @include dFlex();
       border-radius: 30px;
-      padding: 1%;
+      padding: 0.5rem 1rem;
       margin: 2% 0;
       min-width: 50%;
       border: 1px solid;
@@ -123,8 +123,8 @@ $color-secondary: #fff;
         input {
           width: 100%;
           height: 100%;
-          background: transparent;
-          font-size: 1rem;
+          padding-right: 0.5rem;
+          text-align: end;
           border: none;
 
           &:focus {
@@ -148,8 +148,8 @@ $color-secondary: #fff;
         @include dFlex();
         border: 1px solid;
         border-radius: 30px;
-        height: 60%;
-        padding: 0 0.5rem;
+        height: auto;
+        padding: 0.5rem;
 
         p {
           padding-left: 0.5rem;
@@ -161,7 +161,6 @@ $color-secondary: #fff;
           @include dFlex();
           border-radius: 50%;
           background-color: $color-primary;
-          // padding: 0.5rem;
           width: 2.5rem;
           height: 2.5rem;
         }
@@ -291,7 +290,7 @@ $color-secondary: #fff;
           font-size: 1rem;
           font-weight: 800;
           position: absolute;
-          top: 90%;
+          top: 100%;
           left: 0;
           padding: 0.8rem 1.5rem;
         }
@@ -385,6 +384,26 @@ $color-secondary: #fff;
       }
     }
 
+    .secondNav {
+      padding: 0.5rem 1rem;
+      .title {
+        padding: 0;
+      }
+      .categories {
+        width: 60%;
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      .input {
+        font-size: 0.5rem;
+
+        .search {
+          width: fit-content;
+        }
+      }
+    }
+
     .tirdNav {
       .links {
         position: relative;
@@ -413,10 +432,6 @@ $color-secondary: #fff;
         .block {
           position: absolute;
           z-index: 150;
-          display: flex;
-          align-items: center;
-        }
-        ul {
           width: 100%;
           display: flex;
           align-items: center;
@@ -428,6 +443,11 @@ $color-secondary: #fff;
             border: none;
             &:last-child {
               min-width: 35%;
+              padding: 0.5rem;
+              .car-ico {
+                margin-left: 0.5rem;
+                font-size: 1.5rem;
+              }
             }
           }
         }
@@ -436,9 +456,21 @@ $color-secondary: #fff;
       .carousel {
         width: 100%;
         .threeContainer {
-          top: 40%;
+          top: 60%;
           width: 100%;
           height: 65%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .containerHeader {
+    .secondNav {
+      .search {
+        input {
+          width: 0px !important;
         }
       }
     }

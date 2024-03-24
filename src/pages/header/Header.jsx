@@ -27,6 +27,10 @@ const Header = () => {
         setScale(0.005);
         setPosition([1.1, -0.5, 0]);
       }
+      if (width < 500) {
+        setScale(0.005);
+        setPosition([0.45, -0.5, 0]);
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -98,7 +102,7 @@ const Header = () => {
             <li>contact us</li>
             <li>
               car buy
-              <HiShoppingCart className="ico" />
+              <HiShoppingCart className="car-ico" />
             </li>
           </ul>
         </div>
