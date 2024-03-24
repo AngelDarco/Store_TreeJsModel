@@ -17,7 +17,8 @@ $color-secondary: #fff;
   .firstNav {
     @include dFlex();
     width: 100%;
-    height: 2.4rem;
+    height: 3rem;
+    min-height: 2.4rem;
     background: #000;
 
     .phone {
@@ -27,7 +28,7 @@ $color-secondary: #fff;
       justify-content: center;
       width: auto;
       height: 100%;
-      padding: 0 0.5rem;
+      padding: 0.5rem 1rem;
 
       .pcall {
         white-space: nowrap;
@@ -49,10 +50,14 @@ $color-secondary: #fff;
       p {
         @include dFlex();
         height: 40%;
-        padding: 0 0.6rem;
+        padding: 0.6rem;
         text-align: center;
         border-right: 1px solid #aaa;
         color: #fff;
+
+        &:last-child {
+          border: none;
+        }
       }
     }
   }
@@ -126,6 +131,10 @@ $color-secondary: #fff;
             outline: none;
           }
         }
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
       }
     }
 
@@ -140,7 +149,7 @@ $color-secondary: #fff;
         border: 1px solid;
         border-radius: 30px;
         height: 60%;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
 
         p {
           padding-left: 0.5rem;
@@ -149,9 +158,12 @@ $color-secondary: #fff;
         }
 
         .ico {
+          @include dFlex();
           border-radius: 50%;
           background-color: $color-primary;
-          padding: 0.5rem;
+          // padding: 0.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
         }
       }
     }
@@ -169,7 +181,7 @@ $color-secondary: #fff;
     flex-flow: column;
     width: 100%;
     height: 100%;
-    padding: 30px;
+    padding: 3rem 20px;
 
     .links {
       width: 100%;
@@ -213,6 +225,7 @@ $color-secondary: #fff;
           background: #000;
           border: none;
           z-index: 50;
+          padding: 0 1rem;
 
           .ico {
             font-size: 2rem;
@@ -331,7 +344,6 @@ $color-secondary: #fff;
     }
 
     .tirdNav {
-      padding: 0;
       .carousel {
         .threeContainer {
           top: 45%;
@@ -345,6 +357,15 @@ $color-secondary: #fff;
 
 @media (max-width: 580px) {
   .containerHeader {
+    .firstNav {
+      height: fit-content;
+      padding: 0.5rem;
+      .links {
+        p {
+          height: 2rem;
+        }
+      }
+    }
     .tirdNav {
       .carousel {
         .threeContainer {
@@ -358,8 +379,6 @@ $color-secondary: #fff;
   .containerHeader {
     .firstNav {
       flex-flow: column;
-      height: auto;
-      padding: 1rem;
 
       .phone {
         margin-bottom: 0.5rem;
