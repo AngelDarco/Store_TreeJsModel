@@ -20,7 +20,13 @@ export function Model(props) {
   useFrame(() => ref.current && (ref.current.rotation.y += 0.005));
 
   return (
-    <group {...props} dispose={null} ref={ref} scale={0.005}>
+    <group
+      {...props}
+      dispose={null}
+      ref={ref}
+      position={props.position || [3, -0.5, 0]}
+      scale={props.scale || 0.0058}
+    >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
         <mesh
           geometry={nodes.Circle_Plastic_0.geometry}
