@@ -43,6 +43,7 @@ $color-primary: #ffc300;
     padding: 3rem;
 
     .card {
+      animation: fadeIn 2s ease-in-out;
       width: 300px;
       height: auto;
       padding: 10px;
@@ -124,6 +125,15 @@ $color-primary: #ffc300;
         }
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

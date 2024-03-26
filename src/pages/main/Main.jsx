@@ -1,7 +1,9 @@
 import "./Main.scss";
 import Cards from "../../components/Cards";
+import { useRef } from "react";
 
 const Main = () => {
+  const containerRef = useRef();
   return (
     <div className="containerMain">
       <div className="main-title">
@@ -10,8 +12,8 @@ const Main = () => {
         <span></span>
       </div>
 
-      <div className="content">
-        <Cards />
+      <div className="content" ref={containerRef}>
+        <Cards container={containerRef} />
       </div>
     </div>
   );
