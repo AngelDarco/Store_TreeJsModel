@@ -1,51 +1,118 @@
 $bg-color: #ceb2fc8f;
 $bg-color2: #ffd861;
-$bg-color3: #735cf5;
+$bg-color3: #f5f;
 
-.containerFooter{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 3rem;
-        margin: 1rem 0;
+.containerFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
 
-        .icons{
-            font-size: 2rem;
-            width: 50%;
-            height: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            color: $bg-color3;
+  .body {
+    width: 80%;
+    padding: 1rem 0.5rem;
 
-            svg {
-                &:hover{
-                    height: 100%;
-                    color: #f50000;
-                    font-size: 2.5rem;
-                    background-color: #000000da;
-                    border-radius: 50%;
-                    padding: 1%;
-            }
-        }
+    h2 {
+      span {
+        padding-left: 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+      }
     }
+    p {
+      text-align: end;
+    }
+  }
+
+  .icons {
+    font-size: 2rem;
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: $bg-color3;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      &:hover {
+        height: 100%;
+        color: #5f5;
+        scale: 1.1;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
 @media (max-width: 850px) {
-    .containerFooter{
-        .icons{
-            width: 80%;
-            font-size: 1.5rem;
-        }
+  .containerFooter {
+    .icons {
+      width: 80%;
+      font-size: 1.5rem;
     }
+  }
 }
 
 @media (max-width: 500px) {
-    .containerFooter{
-        .icons{
-            width: 90%;
-            font-size: 1rem;
-        }
+  .containerFooter {
+    .icons {
+      width: 90%;
+      font-size: 1rem;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .containerFooter {
+    .body {
+      h2 {
+        span {
+          font-size: 0.9rem;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .containerFooter {
+    .body {
+      h2 {
+        font-size: 1.3rem;
+        span {
+          font-size: 0.8rem;
+        }
+      }
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .containerFooter {
+    .body {
+      flex-direction: column;
+      height: 100%;
+      h2 {
+        font-size: 0.9rem;
+        span {
+          font-size: 0.7rem;
+        }
+      }
+      p {
+        font-size: 0.65rem;
+      }
+    }
+  }
 }
